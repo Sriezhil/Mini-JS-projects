@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAT & BULB</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body  class="bg-black">
+    <div class="2xl:container mx-auto bg-black h-[100%]">
+        <div class="w-[90%] mx-auto ">
+            <div class="w-[90%] mx-auto flex flex-col justify-center items-center bg-black">
+            
+
+                <img src="https://ik.imagekit.io/mijor8nhc/DOM%20projects/bulb-go-on-img.png?updatedAt=1722170099591" alt="bulb" class="h-40" id="bulb">
+                
+                <img src="https://ik.imagekit.io/mijor8nhc/DOM%20projects/cat-img.png?" alt="cat" class="h-40 " id="cat">
+                
+                <p id="para" class="text-yellow-50 font-semibold font-[poppins]">Switched On</p>
+                
+                
+                <div class="flex gap-2 py-4 px-4">
+
+                
+
+                 <button  class="text-white  bg-gray-500 py-0.5 px-4 rounded-lg" id="on">On</button>
+                  <button class="text-white   bg-gray-500 py-0.5 px-4 rounded-lg" id="off"> Off</button>
+
+                </div>
+               
+                </div>
+            
+        </div>
+    </div>
+
+
+
+    <script>
+        const bulb = document.getElementById("bulb")
+        const cat = document.getElementById("cat")
+
+        const para = document.getElementById("para")
+        const on = document.getElementById("on")
+        const off = document.getElementById("off")
+
+
+        on.addEventListener("click",() => {
+
+            console.log("on btn clicked")
+
+            console.log(cat)
+            cat.src = "https://ik.imagekit.io/mijor8nhc/DOM%20projects/cat-img.png?"
+            bulb.src = "https://ik.imagekit.io/mijor8nhc/DOM%20projects/bulb-go-on-img.png?"
+            para.textContent = "Switched On"
+            on.style.backgroundColor = "green"
+            off.style.backgroundColor = "gray"
+            
+        })
+
+
+        off.addEventListener("click",() => {
+
+console.log("off btn clicked")
+cat.src = "https://ik.imagekit.io/mijor8nhc/DOM%20projects/cat-eyes-img.png?"
+bulb.src = "https://ik.imagekit.io/mijor8nhc/DOM%20projects/bulb-go-off-img.png?"
+para.textContent = "Switched Off"
+off.style.backgroundColor = "red"
+on.style.backgroundColor = " gray"
+})
+
+
+
+
+
+</script>
+   
+</body>
+</html>

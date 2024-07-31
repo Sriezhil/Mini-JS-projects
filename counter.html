@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Headland+One&family=Koh+Santepheap:wght@100;300;400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+ 
+</head>
+<body class="bg-black">
+    
+<div class="2xl:container mx-auto" >
+    <div class="w-[90%] mx-auto ">
+        <div class="flex flex-col justify-center items-center py-60">
+            <p class="text-white font-semibold space-x-3 space-y-3 font-[KohSantepheap] text-5xl mb-4">Counter</p>
+            <p class="text-white font-semibold space-x-3 space-y-3  text-5xl " id="num">0</p>
+
+            <div class="flex gap-4 m-6">
+                <button class="text-white bg-gray-600 py-2 px-6 rounded-lg font-bold font-[KohSantepheap] text-xl" id="subbtn">-</button>
+                <button class="text-white  bg-gray-600 py-2 px-6 rounded-lg font-medium font-[KohSantepheap] text-xl" id="resetbtn">Reset</button>
+                <button class="text-white  bg-gray-600  py-2 px-6 rounded-lg font-bold font-[KohSantepheap] text-xl" id="addbtn">+</button>
+
+            </div>
+           
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+const addbtn = document.getElementById("addbtn")
+const subbtn = document.getElementById("subbtn")
+const resetbtn = document.getElementById("resetbtn")
+const num = document.getElementById("num")
+
+
+addbtn.addEventListener("click",() => {
+    console.log("add btn clicked")
+    num.textContent = parseInt(num.textContent)+1
+    console.log(num.textContent)
+    num.classList.value = "text-green-500 font-semibold space-x-3 space-y-3  text-5xl"
+    addbtn.style.backgroundColor = "gray"
+    resetbtn.style.backgroundColor = ""
+    subbtn.style.backgroundColor = ""
+    
+
+    
+
+})
+
+resetbtn.addEventListener("click",() => {
+    console.log("reset btn clicked")
+    num.textContent = "0"
+    num.classList.value = "text-white font-semibold space-x-3 space-y-3  text-5xl"
+    addbtn.style.backgroundColor = ""
+    resetbtn.style.backgroundColor = "gray"
+    subbtn.style.backgroundColor = ""
+    
+})
+
+subbtn.addEventListener("click",() => {
+    console.log("sub btn clicked")
+    num.textContent = parseInt(num.textContent)-1
+    console.log(num.textContent)
+
+    num.classList.value = "text-red-500 font-semibold space-x-3 space-y-3  text-5xl"
+    addbtn.style.backgroundColor = ""
+    resetbtn.style.backgroundColor = ""
+    subbtn.style.backgroundColor = "gray"
+
+    
+})
+
+</script>
+
+
+</body>
+</html>
